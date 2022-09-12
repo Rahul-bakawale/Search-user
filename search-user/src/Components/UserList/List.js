@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { data as useList } from "./UserData";
 
-const List = () => {
+  const List = () => {
+  const [data, setData] = useState(useList)
+  debugger
   return(
     <>
-      <html lang="en">
-        <body>
-          {/* <div id="overlay">
+    {/* <div>
+          <div id="overlay">
             <img src="./img/preloader.gif" alt="Preloader icon" />
-          </div> */}
+          </div>
           <main>
             <div id="table-section">
-              {/* <form action="/">
+              <form action="/">
                 <img src='./img/search-icon.svg' alt="Search Icon" />
                 <input type="text" placeholder="Enter something" name="search-box" id="search-box" value="" />
-              </form> */}
+              </form>
               <div id="table-wrapper">
                 <div id="table-headers">
                   <table>
@@ -31,13 +33,12 @@ const List = () => {
                 <div id="table-data">
                   <table>
                     <tbody>
-                   
                       <tr className="data-row">
-                          <td className="column1">856</td>
-                          <td className="column2">Yeqing</td>
-                          <td className="column3">Elshoff</td>
-                          <td className="column4">RKimmel@tincidunt.com</td>
-                          <td className="column5">(230)488-3157</td>
+                        <td className="column1">856</td>
+                        <td className="column2">Yeqing</td>
+                        <td className="column3">Elshoff</td>
+                        <td className="column4">RKimmel@tincidunt.com</td>
+                        <td className="column5">(230)488-3157</td>
                       </tr>
                     </tbody>
                   </table>
@@ -62,9 +63,14 @@ const List = () => {
               </div>
             </div>
           </main>
-          <script src="./script.js"></script>
-        </body>
-      </html>
+    </div> */}
+    {data.map((item,index) => {
+      return(
+        <>
+         <p>{item.id}</p> 
+        </>
+      )
+    })}
     </>
   );
 };
