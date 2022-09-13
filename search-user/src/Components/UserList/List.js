@@ -1,35 +1,26 @@
 import React, { useState } from "react";
-import { data as useList } from "./UserData";
+import { data as userList } from "./UserData";
+import SearchUser from "../Search/SearchUser";
 
-  const List = () => {
-  const [data, setData] = useState(useList)
-  debugger
+  const List = () => { 
+  const [data, setData] = useState(userList)
+  const [search, setSearch] = useState("");
+
+  const onChangeSearch = (searchValue) => {
+    setSearch(searchValue)
+    if(searchValue === "" ){
+      setData(userList)
+    }else{
+      const newArray = userList.filter((i) =>
+        i.firstName.toLowerCase().includes(searchValue.toLowerCase())
+      );
+      setData(newArray);
+    }
+  }
+
   return(
-    <>
-    {/* <div>
-          <div id="overlay">
-            <img src="./img/preloader.gif" alt="Preloader icon" />
-          </div>
-          <main>     
-            <div id="info-wrapper">
-              <h1>Details</h1>
-              <p>Click on a table item to get detailed information</p>
-              <div id="info-content">
-                <div><b>User selected:</b> Marcellin Shrestha</div>
-                <div>
-                  <b>Description: </b>
-                  <textarea cols="50" rows="5" readonly>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quia nihil. Est, illum minima libero rerum, nihil distinctio placeat sint nam quae repellendus obcaecati delectus totam non odio. Sint, reprehenderit?
-                  </textarea>
-                </div>
-                <div><b>Address:</b> 6480 Nec Ct</div>
-                <div><b>City:</b> Dinwiddie</div>
-                <div><b>State:</b> NV</div>
-                <div><b>Zip:</b> 91295</div>
-              </div>
-            </div>
-          </main>
-        </div> */}
+  <>
+    <SearchUser  search={search} onChangeSearch={onChangeSearch} /> 
     <div id="table-wrapper">
         <div id="table-headers">
           <table>
@@ -49,13 +40,15 @@ import { data as useList } from "./UserData";
         <div id="table-data">
         <table>
           <tbody>
-            <tr className="data-row">
+            <tr className="data-row" >
+              
               <td className="column1">{item.id}</td>
               <td className="column2">{item.firstName}</td>
               <td className="column3">{item.lastName}</td>
               <td className="column4">{item.email}</td>
               <td className="column5">{item.phone}</td>
             </tr>
+
           </tbody>
         </table>
       </div>

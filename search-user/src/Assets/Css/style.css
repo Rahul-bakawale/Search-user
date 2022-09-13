@@ -68,6 +68,7 @@
     background-color: white;
     display: none;
   }
+
   
   #overlay img {
     position: absolute;
@@ -170,10 +171,29 @@
     margin-right: 10px;
     margin-left: 5px;
   }
+  .search-bar{
+    /* margin: 40%; */
+    background-color: aqua;
+    padding-top: 100px;
+    overflow: clip;
+    margin-left: 60%;
+    padding:70px;
+    margin-top: 90px;
+    border-radius: 15px;
+    padding: 8px;
+    outline: none;
+    width: 25%; 
+  }
+  /* .search-bar{
+    overflow: scroll;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+  } */
   
   #table-wrapper {
-    margin-top: 120px;
-
+    margin-top: 50px;
+    overflow: hidden;
     box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
   }
   
