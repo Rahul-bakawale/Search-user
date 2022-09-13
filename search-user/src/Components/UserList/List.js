@@ -10,41 +10,7 @@ import { data as useList } from "./UserData";
           <div id="overlay">
             <img src="./img/preloader.gif" alt="Preloader icon" />
           </div>
-          <main>
-            <div id="table-section">
-              <form action="/">
-                <img src='./img/search-icon.svg' alt="Search Icon" />
-                <input type="text" placeholder="Enter something" name="search-box" id="search-box" value="" />
-              </form>
-              <div id="table-wrapper">
-                <div id="table-headers">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th className="column1">Id</th>
-                        <th className="column2">FirstName</th>
-                        <th className="column3">LastName</th>
-                        <th className="column4">Email</th>
-                        <th className="column5">Phone</th>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-                <div id="table-data">
-                  <table>
-                    <tbody>
-                      <tr className="data-row">
-                        <td className="column1">856</td>
-                        <td className="column2">Yeqing</td>
-                        <td className="column3">Elshoff</td>
-                        <td className="column4">RKimmel@tincidunt.com</td>
-                        <td className="column5">(230)488-3157</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+          <main>     
             <div id="info-wrapper">
               <h1>Details</h1>
               <p>Click on a table item to get detailed information</p>
@@ -63,41 +29,40 @@ import { data as useList } from "./UserData";
               </div>
             </div>
           </main>
-    </div> */}
-  <div id="table-wrapper">
-    <div id="table-headers">
-      <table>
-        <thead>
-          <tr>
-            <th className="column1">Id</th>
-            <th className="column2">FirstName</th>
-            <th className="column3">LastName</th>
-            <th className="column4">Email</th>
-            <th className="column5">Phone</th>
-          </tr>
-        </thead>
-      </table>
+        </div> */}
+    <div id="table-wrapper">
+        <div id="table-headers">
+          <table>
+            <thead>
+              <tr>
+                <th className="column1">Id</th>
+                <th className="column2">FirstName</th>
+                <th className="column3">LastName</th>
+                <th className="column4">Email</th>
+                <th className="column5">Phone</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        {data.map((item,index) => {
+        return(
+        <div id="table-data">
+        <table>
+          <tbody>
+            <tr className="data-row">
+              <td className="column1">{item.id}</td>
+              <td className="column2">{item.firstName}</td>
+              <td className="column3">{item.lastName}</td>
+              <td className="column4">{item.email}</td>
+              <td className="column5">{item.phone}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      )
+      })}
     </div>
-    {data.map((item,index) => {
-    return(
-    <div id="table-data">
-    <table>
-      <tbody>
-        <tr className="data-row">
-          <td className="column1">{item.id}</td>
-          <td className="column2">{item.firstName}</td>
-          <td className="column3">{item.lastName}</td>
-          <td className="column4">{item.email}</td>
-          <td className="column5">{item.phone}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  )
-  })}
-</div>
-    
-    </>
+  </>
   );
 };
 
