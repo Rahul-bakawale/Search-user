@@ -12,7 +12,7 @@ import SearchUser from "../Search/SearchUser";
       setData(userList)
     }else{
       const newArray = userList.filter((i) =>
-        i.firstName.toLowerCase().includes(searchValue.toLowerCase())
+        i.firstName.toLowerCase().includes(searchValue.toLowerCase()) ||  i.lastName.toLowerCase().includes(searchValue.toLowerCase())
       );
       setData(newArray);
     }
@@ -37,7 +37,7 @@ import SearchUser from "../Search/SearchUser";
         </div>
         {data.map((item,index) => {
         return(
-        <div id="table-data">
+        <div id="table-data" >
         <table>
           <tbody>
             <tr className="data-row" >
@@ -58,5 +58,4 @@ import SearchUser from "../Search/SearchUser";
   </>
   );
 };
-
 export default List;

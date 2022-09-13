@@ -10,7 +10,7 @@ const Header = () => {
           </div>
           <nav  className='nav-desktop'>
             <a href='https://www.xenpark.com/' target="_blank">Home</a>
-            <a href=''>About Us</a>
+            <a href='https://www.xenpark.com/About' target="_blank">About Us</a>
             <a href=''></a>
           </nav>
         </header>
@@ -20,3 +20,9 @@ const Header = () => {
 }
 
 export default Header;
+// https://reactjs.org/docs/conditional-rendering.html
+// https://reactjs.org/docs/lifting-state-up.html
+
+
+
+// https://sharepointeducation.wordpress.com/2020/03/16/react-js-multiple-choice-questions-part-2/
