@@ -49,10 +49,30 @@ export const data = [
     phone:"(421)120-7963",
   },
   {
-    id: "510",
+    id: "70",
     firstName:"Deep",
     lastName:"Dean",
     email:"Deandeep@amet.io",
+    phone:"(421)120-7963",
+  },{
+    id: "10",
+    firstName:"Rahul",
+    lastName:"Bakawale",
+    email:"Bakawale@amet.io",
+    phone:"(421)120-7963",
+  },
+  {
+    id: "60",
+    firstName:"sam",
+    lastName:"jees",
+    email:"samjees@amet.io",
+    phone:"(421)120-7963",
+  },
+  {
+    id: "70",
+    firstName:"Umesh",
+    lastName:"Gupta",
+    email:"GuptaUmesh@amet.io",
     phone:"(421)120-7963",
   },
  
