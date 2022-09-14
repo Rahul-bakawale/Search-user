@@ -9,6 +9,17 @@
     margin: 0;
     font-family: "Lato", sans-serif;
   }
+  #tag-name h1{ 
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size:xx-large;
+  }
+  
+  .list-data{
+   padding-left: 45%;
+   color: black;
+  }
 
   header{
     display: flex;
@@ -94,10 +105,10 @@
   a {
     text-decoration: none;
   }
-  
+/*   
   form {
     border: 1px solid black;
-    width: 230px;
+    width: 400px;
     padding: 6px 10px;
     border-radius: 20px;
     display: flex;
@@ -105,7 +116,24 @@
     margin: 0 auto;
     margin-bottom: 20px;
   }
-  
+   */
+
+  .row{
+    background-image: url"https://previews.123rf.com/images/osaba/osaba1705/osaba170500026/78604345-top-view-business-office-desk-background-the-applying-for-a-job-form-and-pen-pencil-eyeglasses-tree-.jpg";
+    padding: 44px;
+    margin: 51px 270px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
+    box-shadow: 1px 2px 3px;
+    border-radius: 51;
+  }
+  .btn1{
+    border: 1px solid white;
+    padding-left: 45%;
+    margin-top: 30px;
+  }
   button,
   input,
   textarea {
@@ -240,23 +268,30 @@
   }
   
   .column1 {
-    width: 50px;
+    width: 200px;
   }
   
   .column2 {
-    width: 170px;
+    width: 400px;
   }
   
   .column3 {
-    width: 170px;
+    width: 400px;
   }
   
   .column4 {
-    width: 170px;
+    width: 400px;
   }
   
   .column5 {
-    width: 300px;
+    width: 800px;
+  }
+  .column6 {
+    width: 45px;
+  }
+  .btn{
+    display: flex;
+    justify-content: flex-end;
   }
   
   .active {
