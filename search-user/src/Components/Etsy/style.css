@@ -1,0 +1,21 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  margin: 0%;
+  padding: 0%;
+  font-family: "Lato", sans-serif;
+}
+header{
+  display: flex;
+  
+  text-decoration: none;
+  background-color: white;
+  border-radius: 1px solid red;
+  overflow: auto;
+}
+img{
+  width: 5%;
+}
