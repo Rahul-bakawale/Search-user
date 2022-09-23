@@ -15,6 +15,13 @@ body {
   margin: auto;
   width: 60%;
 }
+.container{
+  /* font-weight: bold; */
+  /* padding-left: 125px; */
+  font-size:small;
+  margin: 54px;
+  margin-top: 19px;
+}
 h1{
   text-align: center;
   text-decoration: none;
@@ -26,44 +33,24 @@ header{
   display: flex;
   justify-content:center;
   letter-spacing: 0px;
+  font-style: italic;
   text-transform: capitalize;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   text-indent: 1px; 
 }
 header a{
   text-decoration: none;
   color: blue;
-
+}
+a:hover{
+  color:orange
 }
 header p{
-  color:blue
-}
-p:link{
+  color:blue,
 }
 p:hover{
   color:orange
 }
- /* a:link{
-  color:blue
-}
- a:visited{
-  
-}
-a:active{
-  color:DeepSkyBlue
-} */
- a:hover{
-  color:orange
-}
-
-.container{
-  font-size:small;
-  /* font-weight: bold; */
-  margin: 54px;
-  margin-top: 19px;
-  /* padding-left: 125px; */
-}
-
 i{
 font-style: italic;
 font-weight: 600;
